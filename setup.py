@@ -28,7 +28,8 @@ def check_for_liburing_headers():
     finally:
         os.remove(test_file)
 
-if not check_for_liburing() or not check_for_liburing_headers():
+
+if not check_for_liburing_headers():
     raise CompileError("liburing is not installed or its headers are missing. Please install them using your package manager.")
 
 module = Extension(
@@ -49,8 +50,6 @@ setup(
     author_email='ddosserr.developer.666@gmail.com',
     url='https://github.com/DdoSseRr/async_fs',
     classifiers=[
-        'Programming Language :: Python :: 3.10',
-        'Programming Language :: Python :: 3.11',
         'Programming Language :: Python :: 3.12',
         'Programming Language :: C++',
         'License :: OSI Approved :: MIT License',
@@ -58,6 +57,6 @@ setup(
         'Operating System :: Unix',
     ],
     platforms=['Linux'],
-    python_requires='>=3.6',
+    python_requires='>=3.11',
     license='MIT',
 )
