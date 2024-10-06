@@ -1,0 +1,7 @@
+/.venv
+/.vscode
+/async_fs.egg-info
+/build
+/dist
+/setup.cfg
+/test.o
